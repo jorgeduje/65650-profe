@@ -1,14 +1,4 @@
-let products = [
-  {
-    id: "1",
-    title: "zapatila nike",
-    price: 12432,
-    description: "estas son las mejores",
-    imageUrl:
-      "https://res.cloudinary.com/dnqfh2chg/image/upload/v1686581567/images_teykwq.jpg",
-    stock: 12,
-    category: "deportivas",
-  },
+export let products = [
   {
     id: "2",
     title: "wilson advance",
@@ -18,6 +8,16 @@ let products = [
     category: "deportivas",
     imageUrl:
       "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430010/foc364fsakkzmausrovn.jpg",
+  },
+  {
+    id: "1",
+    title: "zapatila nike",
+    price: 12432,
+    description: "estas son las mejores",
+    imageUrl:
+      "https://res.cloudinary.com/dnqfh2chg/image/upload/v1686581567/images_teykwq.jpg",
+    stock: 12,
+    category: "deportivas",
   },
   {
     id: "3",
