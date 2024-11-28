@@ -1,0 +1,11 @@
+.container-navbar {
+  background-color: steelblue;
+}
+.container-navbar-dark {
+  background-color: red;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

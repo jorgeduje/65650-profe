@@ -26,23 +26,17 @@ export const ItemListContainer = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Aca van los productos</h2>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        flexWrap: "wrap",
+        width: "100%",
+      }}
+    >
       {items.map((elemento) => {
         return <CardItem key={elemento.id} elemento={elemento} />;
       })}
     </div>
   );
 };
-
-// const sumar = (x)=>{
-//   xtilte
-//   ximagen
-// }
-
-// sumar(1)
-// sumar(2)
-// sumar(3)
-// sumar(4)
-// sumar(5)
-// sumar(6)

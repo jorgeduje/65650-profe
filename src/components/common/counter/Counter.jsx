@@ -1,31 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Counter = ({ darkMode }) => {
-  const [contador, setContador] = useState(1); // [ variable, setter ]
-  const [name, setName] = useState("pepito");
+const Counter = () => {
+  const [contador, setContador] = useState(1);
 
   const sumar = () => {
-    setContador(contador + 1); // 10 + 1 ---> 10 + 1 = contador
+    setContador(contador + 1);
   };
-
-  const changeName = () => {
-    if (name === "pepito") {
-      setName("juancito");
-    } else {
-      setName("pepito");
-    }
+  const restar = () => {
+    setContador(contador - 1);
   };
-
-  useEffect(() => {
-    console.log("se ejecuta");
-    console.log("ME CONECTE A JAPON");
-  }, [contador]);
 
   return (
     <div style={{ color: "red", margin: "20px" }}>
+      <button onClick={restar}>restar</button>
       <h1>contador = {contador}</h1>
       <button onClick={sumar}>sumar</button>
-      <button onClick={changeName}>Cambiar nombre</button>
     </div>
   );
 };
