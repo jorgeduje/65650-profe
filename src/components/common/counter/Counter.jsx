@@ -13,8 +13,9 @@ const Counter = () => {
   return (
     <div style={{ color: "red", margin: "20px" }}>
       <button onClick={restar}>restar</button>
-      <h1>contador = {contador}</h1>
+      <h2>{contador}</h2>
       <button onClick={sumar}>sumar</button>
+      <button>Agregar al carrito</button>
     </div>
   );
 };
