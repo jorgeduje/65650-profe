@@ -1,20 +1,13 @@
-import { useState } from "react";
-import Counter from "./Counter";
-import { ItemListContainer } from "./ItemListContainer";
+import Navbar from "./components/layout/navbar/Navbar";
+import { ItemListContainer } from "./components/pages/itemList/ItemListContainer";
+import FetchingData from "./FetchingData";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
-
-  const changeMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  console.log(darkMode);
   return (
     <div>
-      <button onClick={changeMode}>Sol/Luna</button>
-      <ItemListContainer darkMode={darkMode} />
-      <Counter darkMode={darkMode} />
+      <Navbar />
+      {/* <ItemListContainer /> */}
+      <FetchingData />
     </div>
   );
 }
