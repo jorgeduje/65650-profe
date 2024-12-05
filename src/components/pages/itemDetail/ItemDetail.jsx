@@ -17,7 +17,7 @@ const ItemDetail = () => {
     <div>
       <h2>{product.title}</h2>
       <img src={product.imageUrl} alt="" />
-      <Counter />
+      <Counter product={product} />
     </div>
   );
 };
