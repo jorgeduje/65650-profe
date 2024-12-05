@@ -7,16 +7,6 @@ import { useParams } from "react-router-dom";
 export const ItemListContainer = () => {
   const { name } = useParams(); // {}
 
-  // truthy | falsy
-
-  // name -->  undefined ----> todos
-  // name -->  string  ----> una parte
-  // if(name){
-  //   // filtro y muestro una porcion del array
-  // }else{
-  //   // no filtro y muestro todo
-  // }
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -26,7 +16,9 @@ export const ItemListContainer = () => {
     const getProducts = new Promise((resolve, reject) => {
       let isLogged = true;
       if (isLogged) {
-        resolve(name ? arrayFiltrado : products);
+        setTimeout(() => {
+          resolve(name ? arrayFiltrado : products);
+        }, 2000);
       } else {
         reject({ message: "ocurrio un error" });
       }
@@ -41,18 +33,31 @@ export const ItemListContainer = () => {
       });
   }, [name]);
 
+  // if (items.length === 0) {
+  //   return <h1>Cargando......</h1>;
+  // }
+
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        flexWrap: "wrap",
-        width: "100%",
-      }}
-    >
-      {items.map((elemento) => {
-        return <CardItem key={elemento.id} elemento={elemento} />;
-      })}
+    <div>
+      <h2>Esta es mi tienda</h2>
+      {items.length === 0 ? (
+        <h1>Cargando......</h1>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+            width: "100%",
+          }}
+        >
+          {items.map((elemento) => {
+            return <CardItem key={elemento.id} elemento={elemento} />;
+          })}
+        </div>
+      )}
+
+      <h3>Otra cosa</h3>
     </div>
   );
 };
