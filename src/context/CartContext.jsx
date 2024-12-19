@@ -5,7 +5,35 @@ export const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  //   const existeEnElCarrito = ( product )=>{}
+  // const addToCart = (product) => {
+  //   // si esta , que no lo agregue
+  //   // si no esta, que si lo agregue
+  //   // let isInCart = cart.filter ( el => el.id === product.id ) // []
+  //   // let isInCart = cart.find( el => el.id === product.id ) // elemento || undefined
+  //   let isInCart = cart.some((el) => el.id === product.id); // booleano
+
+  //   if (isInCart) {
+  //     console.log("se ejecuta el if");
+  //     // generar un nuevo array, igual que el anterior pero con un { } modificado
+  //     // con ese array remplazar el anteriror
+
+  //     let nuevoArray = cart.map((elemento) => {
+  //       if (elemento.id === product.id) {
+  //         return {
+  //           ...elemento,
+  //           quantity: elemento.quantity + product.quantity,
+  //         };
+  //       } else {
+  //         return elemento;
+  //       }
+  //     }); // [{}{}{}]
+
+  //     setCart(nuevoArray);
+  //   } else {
+  //     console.log("se ejecuta el else");
+  //     setCart([...cart, product]);
+  //   }
+  // };
 
   const addToCart = (product) => {
     setCart([...cart, product]);
